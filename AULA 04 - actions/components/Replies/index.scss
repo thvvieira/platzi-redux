@@ -1,0 +1,52 @@
+@import '../../styles/variables.scss';
+
+
+.reply {
+  border-left: 3px solid $light-grey;
+  padding-left: 20px;
+  word-wrap: break-word;
+}
+
+.header {
+  color: $grey;
+  font-weight: 200;
+
+  > span {
+    display: inline-block;
+  vertical-align: middle;
+  }
+}
+
+.separated {
+  display: inline-block;
+  vertical-align: middle;
+
+  &:before {
+    content: "·";
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+.text {
+  font-size: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: $primary;
+  font-weight: 400;
+  cursor: pointer;
+
+  &:visited {
+    text-decoration: none;
+    color: $primary;
+  }
+
+  &, &:hover, &:focus {
+    transition: all 0.2s ease-out;
+    outline: none;
+  }
+}

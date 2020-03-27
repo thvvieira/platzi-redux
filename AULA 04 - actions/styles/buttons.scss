@@ -1,0 +1,39 @@
+@import './variables.scss';
+
+:global {
+  .btn {
+    cursor: pointer;
+    display: inline-block;
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: $btn-radius;
+    padding: 10px 25px;
+    font-size: 1rem;
+    text-align: center;
+
+    &, &:hover {
+      transition: all 0.2s ease-out;
+    }
+
+    &.btn-primary, .btn-primary {
+      background-color: $primary;
+      border-color: $primary;
+      color: $white;
+
+      &:hover {
+        background-color: darken($primary, 10%);
+      }
+    }
+
+    &.btn-primary--outline, .btn-primary--outline {
+      background-color: transparent;
+      color: $primary;
+      border-color: $primary;
+
+      &:hover {
+        background-color: $primary;
+        color: $white;
+      }
+    }
+  }
+}

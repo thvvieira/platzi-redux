@@ -1,0 +1,33 @@
+@import '../../styles/variables.scss';
+
+.container {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+
+  .login-button {
+    width: 100%;
+  }
+
+  .heading {
+    font-weight: 200;
+    color: $grey;
+  }
+
+  .cta {
+    color: $grey;
+
+    span {
+      margin-left: 5px;
+    }
+
+    a {
+      color: $primary;
+      text-decoration: none;
+
+      &:visited {
+        color: $primary;
+      }
+    }
+  }
+}

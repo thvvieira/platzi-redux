@@ -1,0 +1,150 @@
+@import './variables.scss';
+
+@font-face {
+  font-family: 'open-sans';
+  src: url('./fonts/OpenSans-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'open-sans';
+  src: url('./fonts/OpenSans-Light.ttf');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'open-sans';
+  src: url('./fonts/OpenSans-Bold.ttf');
+  font-weight: 800;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: $base-font;
+  line-height: $base-line-height;
+  background-color: $bg-grey;
+  position: relative;
+}
+
+:global {
+  #app-container {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100vh;
+    display: block;
+
+    @media #{$viewport-medium} {
+      width: 750px;
+    }
+
+    @media #{$viewport-large} {
+      width: 700px;
+    }
+
+    > div {
+      display: flex;
+      justify-content: center;
+      flex: 1;
+    }
+  }
+
+  input[type=text],
+  input[type=password] {
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    color: $grey;
+
+    border: 1px solid $light-grey;
+    border-radius: $btn-radius;
+    outline: none;
+
+    background-color: $white;
+
+    width: 100%;
+    margin: 10px 0;
+    padding: 5px 10px;
+
+    &, &:focus, &:active {
+      transition: border 0.2s ease-out;
+    }
+
+    &:focus, &:active {
+      border-color: $primary;
+    }
+  }
+
+  textarea {
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    color: $grey;
+
+    width: 100%;
+    margin: 10px 0;
+    padding: 5px 10px;
+    resize: vertical;
+
+    border: 0;
+    border-bottom: 1px solid $light-grey;
+    outline: none;
+    border-radius: 0;
+
+    &, &:focus, &:active {
+      transition: border 0.2s ease-out;
+    }
+
+    &:focus, &:active {
+      border-color: $primary;
+    }
+  }
+
+  .mtb10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .mtb20 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .mtb30 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .mtb40 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .ptb10 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .ptb20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .ptb30 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .ptb40 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@import './components.scss';
+@import './buttons.scss';
+

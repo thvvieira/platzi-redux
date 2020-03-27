@@ -1,0 +1,27 @@
+@import '../../styles/variables.scss';
+
+.item {
+  .header {
+    color: $grey;
+    font-weight: 200;
+  }
+
+  .text {
+    font-size: 1em;
+  }
+
+  a {
+    text-decoration: none;
+    color: $primary;
+    font-weight: 400;
+
+    &:visited {
+      text-decoration: none;
+      color: $primary;
+    }
+
+    &, &:hover {
+      transition: all 0.2s ease-out;
+    }
+  }
+}
